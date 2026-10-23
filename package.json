@@ -1,0 +1,13 @@
+{
+  "name": "rbu-event-manager",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "dev": "concurrently --kill-others-on-fail -n backend,frontend \"node scripts/check-backend.js || npm --prefix server run dev\" \"wait-on --timeout 30000 http://127.0.0.1:5000/api/health && npm --prefix client run dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "wait-on": "^9.5.1"
+  }
+}

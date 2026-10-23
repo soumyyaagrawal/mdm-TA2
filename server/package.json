@@ -1,0 +1,16 @@
+{
+  "name": "rbu-event-manager-server",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^13.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^18.0.6",
+    "express": "^4.21.2",
+    "zod": "^3.24.1"
+  }
+}
